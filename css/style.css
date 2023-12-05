@@ -6,7 +6,23 @@
     box-sizing: border-box;
 }
 
+/* GENERICS */
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+ /* UTILS */
+
 img {
+    height: 100px;
+    width: 100px;
     display: block;
     max-width: 100%;
 }
@@ -23,18 +39,49 @@ a {
     color: inherit;
 }
 
- /* UTILS */
+/* main */
 
-.container {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 1rem;
+h1 {
+    color: #e53170;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+h1,
+p {
+    text-align: center;
+    margin: 30px 0;
+}
+
+h2 {
+    color: #fefcf9;
+    font-weight: 500;
 }
 
 .row {
     margin: 0 -1rem;
+
+    /* bebug */
+    height: 500px;
+}
+
+.row::after {
+    content:"";
+    display:block;
+    clear:both;
 }
 
 .col {
+    float: left;
+    height: 100%;
     padding: 1rem;
+    width: calc(100% / 3);
+
+    /* debug */
+    background-color: aqua;
+}
+
+.card {
+    margin: 1rem;
+    background-color: #0f0e17;
 }
